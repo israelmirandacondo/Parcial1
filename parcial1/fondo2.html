@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oficina - Sistema de Activos Fijos</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f0f0f0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background-color: white;
+            border: 2px solid #003366;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+        }
+
+        .header {
+            background-color: #003366;
+            color: white;
+            padding: 8px 15px;
+            font-weight: bold;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .title {
+            font-size: 18px;
+        }
+
+        .form-section {
+            padding: 15px;
+            background-color: #f8f8f8;
+            border-bottom: 1px solid #ccc;
+        }
+
+        label {
+            font-size: 14px;
+            margin-right: 10px;
+        }
+
+        input[type="text"], select {
+            padding: 5px;
+            width: 300px;
+            border: 1px solid #999;
+        }
+
+        textarea {
+            width: 100%;
+            height: 60px;
+            resize: vertical;
+            border: 1px solid #999;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+
+        th {
+            background-color: #003366;
+            color: white;
+            padding: 8px;
+            text-align: left;
+            font-size: 14px;
+        }
+
+        td {
+            padding: 8px;
+            border-bottom: 1px solid #ddd;
+            font-size: 14px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        .buttons {
+            padding: 12px;
+            text-align: center;
+            background-color: #f0f0f0;
+            border-top: 1px solid #ccc;
+        }
+
+        button {
+            padding: 8px 18px;
+            margin: 0 5px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            font-size: 13px;
+        }
+
+        .btn-primary {
+            background-color: #003366;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background-color: #004488;
+        }
+
+        .btn-gray {
+            background-color: #666;
+            color: white;
+        }
+
+        .btn-gray:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <!-- Encabezado -->
+        <div class="header">
+            <span>OFICINA</span>
+            <span>UNIDAD: 0252 - Nivel Central</span>
+        </div>
+
+        <!-- Sección del formulario -->
+        <div class="form-section">
+            <label><strong>Oficina:</strong></label>
+            <input type="text" value="1" style="width:50px;">
+            <input type="text" value="100 DIRECCION INLASA" style="width:350px;">
+            <select style="width:120px;">
+                <option>ACTIVO</option>
+            </select>
+
+            <br><br>
+            <label><strong>Observación:</strong></label><br>
+            <textarea></textarea>
+        </div>
+
+        <!-- Tabla de responsables -->
+        <table>
+            <thead>
+                <tr>
+                    <th>Cod.</th>
+                    <th>Responsable</th>
+                    <th>Cargo</th>
+                    <th>CI</th>
+                    <th>Expedido</th>
+                    <th>Estado</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>DRA. GLADYS QUIROGA</td>
+                    <td>DIRECTORA</td>
+                    <td></td>
+                    <td></td>
+                    <td>ACTIVO</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>DR. WALTER AGREDA COCA</td>
+                    <td>DIRECTOR GENERAL EJECUTIVO</td>
+                    <td></td>
+                    <td></td>
+                    <td>ACTIVO</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- Botones inferiores -->
+        <div class="buttons">
+            <button class="btn-gray">Archivar</button>
+            <button class="btn-gray">Inactivar</button>
+            <button class="btn-gray">Nuevo</button>
+            <button class="btn-gray">Modificar</button>
+            <button class="btn-primary" onclick="alert('¡Registro guardado!')">Guardar</button>
+            <button class="btn-gray">Deshacer</button>
+            <button class="btn-gray" onclick="alert('Saliendo...')">Salir</button>
+        </div>
+
+    </div>
+
+</body>
+</html>
